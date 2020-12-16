@@ -5,9 +5,6 @@
     margin-left: 2rem;
 }
 
-
-
-
 /////////////////////////////////
 // Search box
 .search {
@@ -61,9 +58,6 @@
     }
 }
 
-
-
-
 /////////////////////////////////
 // User navigation
 .user-nav {
@@ -111,3 +105,30 @@
     }
 
 }
+
+/////////////////////////////////
+// Side navigation
+.side-nav {
+
+    &__item {
+
+    }
+    &__link {
+
+    }
+    &__icon {
+        width:1.75rem;
+        height:1.75rem;
+    }
+} 
+
+/////////////////////////////////
+// Legal text
+.legal {
+    font-size: 1.3rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
+}
+
+
