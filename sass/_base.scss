@@ -38,10 +38,11 @@ Grey dark 3: #999
 *::before,
 *::after {
     box-sizing: inherit;
-    font-size: 62.5%;    //1rem = 10px, 10px/16px = 0.625px
+    
 }
 html {
     box-sizing: border-box;
+    font-size: 62.5%;    //1rem = 10px, 10px/16px = 0.625px
 }
 body {
     font-family: 'Open sans', sans-serif;
