@@ -415,6 +415,64 @@
     }
 }
 
+/////////////////////////////////
+// Cta - Call to action
+.cta {
+    padding: 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/////////////////////////////////
+// cta (button)
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light),var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    & > * {
+        display: inline-block;  // span -set to inline-block to can use padding in there
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+    &__invisible {
+        padding: 2rem 0;
+        position: absolute;
+        left: 0;
+        top: -100%;
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);    //we don't use absolute positioning here because we have used onced before
+    }
+    &:hover &__invisible {
+        top: 0;
+    }   
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+
+    }
+}
 
 
 
