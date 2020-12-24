@@ -34,6 +34,14 @@ Grey dark 3: #999
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
     --line: 1px solid var(--color-grey-light-2);
 }
+$bp-largest: 75em;  //1200px/16px = 75em // variable for @meadia-query condition..(it must with sass variables in @media)
+$bg-large: 68.75em; //1100px/16px = 68.75em
+$bg-medium: 56.25em;  //900px/16px = 56.25em
+$bp-small: 37.5em;    //600px/16px = 37.5em
+$bp-smallest: 31.25em;         //500px/16px = 31.
+$bp-smallest-2: 18.75em;         //300px/16px = 18.75em
+
+
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +54,17 @@ Grey dark 3: #999
 }
 html {
     box-sizing: border-box;
-    font-size: 62.5%;    //1rem = 10px, 10px/16px = 0.625px
+    font-size: 62.5%;    //1rem = 10px, 10px/16px = 0.625px => for the largest(default)
+
+    @media only screen and (max-width:$bg-large) {
+        font-size: 50%;     //1rem = 8px, 8px/16px = 0.5px -> for the large, we can change()decrease fontsize
+    }
+    @media only screen and (max-width:$bp-smallest) {
+        font-size: 37.5%;          //1rem = 6px, 6px/16px = 0.375
+    }
+    @media only screen and (max-width:$bp-smallest-2) {
+        font-size: 31.25%;         //1rem = 5px, 5px/16px = 0.3125
+    }
 }
 body {
     font-family: 'Open sans', sans-serif;
